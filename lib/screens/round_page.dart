@@ -56,15 +56,15 @@ class _NameState extends State<RoundPage> {
                         labelText: "x1: ",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.0),
-                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                          borderSide: const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
                         ),
 
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.0),
-                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                          borderSide:  const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
                         ),
 
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           color: Color.fromARGB(229, 76, 108, 198),
                         ),
                       ),
@@ -90,15 +90,15 @@ class _NameState extends State<RoundPage> {
                         labelText: "y1: ",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.0),
-                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                          borderSide: const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
                         ),
 
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.0),
-                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                          borderSide:  const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
                         ),
 
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           color: Color.fromARGB(229, 76, 108, 198),
                         ),
                       ),
@@ -124,15 +124,15 @@ class _NameState extends State<RoundPage> {
                         labelText: "x2: ",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.0),
-                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                          borderSide: const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
                         ),
 
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.0),
-                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                          borderSide:  const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
                         ),
 
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           color: Color.fromARGB(229, 76, 108, 198),
                         ),
                       ),
@@ -158,15 +158,15 @@ class _NameState extends State<RoundPage> {
                         labelText: "y2: ",
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.0),
-                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                          borderSide: const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
                         ),
 
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.0),
-                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                          borderSide:  const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
                         ),
 
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           color: Color.fromARGB(229, 76, 108, 198),
                         ),
                       ),

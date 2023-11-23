@@ -52,15 +52,15 @@ class _NameState extends State<DegPage> {
                     labelText: "Degrees:",
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15.0),
-                      borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                      borderSide: const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
                     ),
 
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15.0),
-                      borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                      borderSide:  const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
                     ),
 
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       color: Color.fromARGB(229, 76, 108, 198),
                     ),
                   ),
