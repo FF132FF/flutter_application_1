@@ -52,9 +52,21 @@ class _NameState extends State<RoundPage> {
                         });
                       },
                       controller: _controllers[0],
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: "x1: ",
-                        border: OutlineInputBorder()
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                        ),
+
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                        ),
+
+                        labelStyle: TextStyle(
+                          color: Color.fromARGB(229, 76, 108, 198),
+                        ),
                       ),
                       keyboardType:
                         const TextInputType.numberWithOptions(decimal: true),
@@ -74,9 +86,21 @@ class _NameState extends State<RoundPage> {
                         });
                       },
                       controller: _controllers[1],
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: "y1: ",
-                        border: OutlineInputBorder()
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                        ),
+
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                        ),
+
+                        labelStyle: TextStyle(
+                          color: Color.fromARGB(229, 76, 108, 198),
+                        ),
                       ),
                       keyboardType:
                         const TextInputType.numberWithOptions(decimal: true),
@@ -96,9 +120,21 @@ class _NameState extends State<RoundPage> {
                         });
                       },
                       controller: _controllers[2],
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: "x2: ",
-                        border: OutlineInputBorder()
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                        ),
+
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                        ),
+
+                        labelStyle: TextStyle(
+                          color: Color.fromARGB(229, 76, 108, 198),
+                        ),
                       ),
                       keyboardType:
                         const TextInputType.numberWithOptions(decimal: true),
@@ -118,9 +154,21 @@ class _NameState extends State<RoundPage> {
                         });
                       },
                       controller: _controllers[3],
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: "y2: ",
-                        border: OutlineInputBorder()
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                        ),
+
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                        ),
+
+                        labelStyle: TextStyle(
+                          color: Color.fromARGB(229, 76, 108, 198),
+                        ),
                       ),
                       keyboardType:
                         const TextInputType.numberWithOptions(decimal: true),
@@ -129,14 +177,14 @@ class _NameState extends State<RoundPage> {
                   
                   SelectableText(
                     res,
-                    style: const TextStyle(fontSize: 25),
+                    style: const TextStyle(fontSize: 25, color: Color.fromARGB(229, 76, 108, 198)),
                     onTap: () {
                       Clipboard.setData(ClipboardData(text: res)).then(
                         (_) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                               content: Text(
-                                "Текст скопирован!",
+                                "Text copied!",
                                 textAlign: TextAlign.center,
                               ),
                             ),

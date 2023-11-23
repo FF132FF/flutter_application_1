@@ -47,16 +47,33 @@ class _NameState extends State<DegPage> {
                       res = GeoMath.toGMS(double.parse(_textcontroller1.text));
                     });
                   },
-                  decoration: const InputDecoration(
-                      labelText: "Введите градусы:",
-                      border: OutlineInputBorder()),
+
+                  decoration: InputDecoration(
+                    labelText: "Degrees:",
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                    ),
+
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                    ),
+
+                    labelStyle: TextStyle(
+                      color: Color.fromARGB(229, 76, 108, 198),
+                    ),
+                  ),
+
+                  
+
                   keyboardType:
-                      const TextInputType.numberWithOptions(decimal: true),
+                    const TextInputType.numberWithOptions(decimal: true),
                 ),
               ),
               SelectableText(
                 res,
-                style: const TextStyle(fontSize: 25),
+                style: const TextStyle(fontSize: 25, color: Color.fromARGB(229, 76, 108, 198)),
                 onTap: () {
                   _textcontroller1.clear();
                   Clipboard.setData(ClipboardData(text: res)).then(
@@ -64,7 +81,7 @@ class _NameState extends State<DegPage> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
                           content: Text(
-                            "Текст скопирован!",
+                            "Text copied!",
                             textAlign: TextAlign.center,
                           ),
                         ),

@@ -54,9 +54,21 @@ class _NameState extends State<DirectPage> {
                           });
                         },
                         controller: _controllers[0],
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: "x1: ",
-                          border: OutlineInputBorder()
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                          ),
+
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                          ),
+
+                          labelStyle: TextStyle(
+                            color: Color.fromARGB(229, 76, 108, 198),
+                          ),
                         ),
                         keyboardType:
                           const TextInputType.numberWithOptions(decimal: true),
@@ -76,9 +88,21 @@ class _NameState extends State<DirectPage> {
                           });
                         },
                         controller: _controllers[1],
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: "y1: ",
-                          border: OutlineInputBorder()
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                          ),
+
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                          ),
+
+                          labelStyle: TextStyle(
+                            color: Color.fromARGB(229, 76, 108, 198),
+                          ),
                         ),
                         keyboardType:
                           const TextInputType.numberWithOptions(decimal: true),
@@ -98,9 +122,21 @@ class _NameState extends State<DirectPage> {
                           });
                         },
                         controller: _controllers[2],
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: "d1: ",
-                          border: OutlineInputBorder()
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                          ),
+
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                          ),
+
+                          labelStyle: TextStyle(
+                            color: Color.fromARGB(229, 76, 108, 198),
+                          ),
                         ),
                         keyboardType:
                           const TextInputType.numberWithOptions(decimal: true),
@@ -121,9 +157,21 @@ class _NameState extends State<DirectPage> {
                         });
                       },
                       controller: _controllers[3],
-                      decoration: const InputDecoration(
-                        labelText: "Градусы: ",
-                        border: OutlineInputBorder()
+                      decoration: InputDecoration(
+                        labelText: "Degrees: ",
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                        ),
+
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                        ),
+
+                        labelStyle: TextStyle(
+                          color: Color.fromARGB(229, 76, 108, 198),
+                        ),
                       ),
                       keyboardType:
                         const TextInputType.numberWithOptions(decimal: true),
@@ -143,9 +191,21 @@ class _NameState extends State<DirectPage> {
                         });
                       },
                       controller: _controllers[4],
-                      decoration: const InputDecoration(
-                        labelText: "Минуты: ",
-                        border: OutlineInputBorder()
+                      decoration: InputDecoration(
+                        labelText: "Minutes: ",
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                        ),
+
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                        ),
+
+                        labelStyle: TextStyle(
+                          color: Color.fromARGB(229, 76, 108, 198),
+                        ),
                       ),
                       keyboardType:
                         const TextInputType.numberWithOptions(decimal: true),
@@ -165,9 +225,21 @@ class _NameState extends State<DirectPage> {
                         });
                       },
                       controller: _controllers[5],
-                      decoration: const InputDecoration(
-                        labelText: "Секунды: ",
-                        border: OutlineInputBorder()
+                      decoration: InputDecoration(
+                        labelText: "Seconds: ",
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                        ),
+
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide:  BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                        ),
+
+                        labelStyle: TextStyle(
+                          color: Color.fromARGB(229, 76, 108, 198),
+                        ),
                       ),
                       keyboardType:
                         const TextInputType.numberWithOptions(decimal: true),
@@ -176,14 +248,14 @@ class _NameState extends State<DirectPage> {
 
                   SelectableText(
                     res,
-                    style: const TextStyle(fontSize: 25),
+                    style: const TextStyle(fontSize: 25, color: Color.fromARGB(229, 76, 108, 198)),
                     onTap: () {
                       Clipboard.setData(ClipboardData(text: res)).then(
                         (_) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                               content: Text(
-                                "Текст скопирован!",
+                                "Text copied!",
                                 textAlign: TextAlign.center,
                               ),
                             ),
