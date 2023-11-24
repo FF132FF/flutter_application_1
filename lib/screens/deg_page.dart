@@ -19,78 +19,80 @@ class _NameState extends State<DegPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 240),
-          child: Column(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(bottom: 50),
-                child: const Text(
-                  'DegToGMS',
-                  style: TextStyle(
-                    color: Color.fromARGB(229, 76, 108, 198),
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-              ),
-
-              Container(
-                width: 310,
-                height: 60,
-                margin: const EdgeInsets.only(left: 25, right: 25, bottom: 50),
-                child: TextField(
-                  controller: _textcontroller1,
-                  onSubmitted: (value) {
-                    setState(() {
-                      res = GeoMath.toGMS(double.parse(_textcontroller1.text));
-                    });
-                  },
-
-                  decoration: InputDecoration(
-                    labelText: "Degrees:",
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                      borderSide: const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
-                    ),
-
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                      borderSide:  const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
-                    ),
-
-                    labelStyle: const TextStyle(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 240),
+            child: Column(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(bottom: 50),
+                  child: const Text(
+                    'DegToGMS',
+                    style: TextStyle(
                       color: Color.fromARGB(229, 76, 108, 198),
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
                     ),
                   ),
-
-                  
-
-                  keyboardType:
-                    const TextInputType.numberWithOptions(decimal: true),
                 ),
-              ),
-              SelectableText(
-                res,
-                style: const TextStyle(fontSize: 25, color: Color.fromARGB(229, 76, 108, 198)),
-                onTap: () {
-                  _textcontroller1.clear();
-                  Clipboard.setData(ClipboardData(text: res)).then(
-                    (_) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text(
-                            "Text copied!",
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      );
+        
+                Container(
+                  width: 310,
+                  height: 60,
+                  margin: const EdgeInsets.only(left: 25, right: 25, bottom: 50),
+                  child: TextField(
+                    controller: _textcontroller1,
+                    onSubmitted: (value) {
+                      setState(() {
+                        res = GeoMath.toGMS(double.parse(_textcontroller1.text));
+                      });
                     },
-                  );
-                },
-              )
-            ],
+        
+                    decoration: InputDecoration(
+                      labelText: "Degrees:",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 0.0),
+                      ),
+        
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide:  const BorderSide(color: Color.fromARGB(229, 76, 108, 198), width: 1.0),
+                      ),
+        
+                      labelStyle: const TextStyle(
+                        color: Color.fromARGB(229, 76, 108, 198),
+                      ),
+                    ),
+        
+                    
+        
+                    keyboardType:
+                      const TextInputType.numberWithOptions(decimal: true),
+                  ),
+                ),
+                SelectableText(
+                  res,
+                  style: const TextStyle(fontSize: 25, color: Color.fromARGB(229, 76, 108, 198)),
+                  onTap: () {
+                    _textcontroller1.clear();
+                    Clipboard.setData(ClipboardData(text: res)).then(
+                      (_) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              "Text copied!",
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  },
+                )
+              ],
+            ),
           ),
         ),
       ),
