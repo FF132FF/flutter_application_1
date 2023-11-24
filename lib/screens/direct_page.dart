@@ -47,6 +47,7 @@ class _NameState extends State<DirectPage> {
                         height: 60,
                         margin: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                         child: TextField(
+                          textInputAction: TextInputAction.next,
                           onSubmitted: (text) {
                             setState(() {
                               if (!_controllers.any((controller) => controller.text.isEmpty || double.tryParse(controller.text) == null)) {
@@ -81,6 +82,7 @@ class _NameState extends State<DirectPage> {
                         height: 60,
                         margin: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                         child: TextField(
+                          textInputAction: TextInputAction.next,
                           onSubmitted: (text) {
                             setState(() {
                               if (!_controllers.any((controller) => controller.text.isEmpty || double.tryParse(controller.text) == null)) {
@@ -115,6 +117,7 @@ class _NameState extends State<DirectPage> {
                         height: 60,
                         margin: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                         child: TextField(
+                          textInputAction: TextInputAction.next,
                           onSubmitted: (text) {
                             setState(() {
                               if (!_controllers.any((controller) => controller.text.isEmpty || double.tryParse(controller.text) == null)) {
@@ -150,6 +153,7 @@ class _NameState extends State<DirectPage> {
                       height: 60,
                       margin: const EdgeInsets.only(left: 25, right: 135, top: 20, bottom: 10),
                       child: TextField(
+                        textInputAction: TextInputAction.next,
                         onSubmitted: (text) {
                           setState(() {
                             if (!_controllers.any((controller) => controller.text.isEmpty || double.tryParse(controller.text) == null)) {
@@ -184,6 +188,7 @@ class _NameState extends State<DirectPage> {
                       height: 60,
                       margin: const EdgeInsets.only(left: 135, right: 25, top: 20, bottom: 10),
                       child: TextField(
+                        textInputAction: TextInputAction.next,
                         onSubmitted: (text) {
                           setState(() {
                             if (!_controllers.any((controller) => controller.text.isEmpty || double.tryParse(controller.text) == null)) {
@@ -251,6 +256,12 @@ class _NameState extends State<DirectPage> {
                       res,
                       style: const TextStyle(fontSize: 25, color: Color.fromARGB(229, 76, 108, 198)),
                       onTap: () {
+                        _controllers[0].clear();
+                        _controllers[1].clear();
+                        _controllers[2].clear();
+                        _controllers[3].clear();
+                        _controllers[4].clear();
+                        _controllers[5].clear();
                         Clipboard.setData(ClipboardData(text: res)).then(
                           (_) {
                             ScaffoldMessenger.of(context).showSnackBar(

@@ -47,6 +47,7 @@ class _NameState extends State<GMSPage> {
                       height: 60,
                       margin: const EdgeInsets.only(left: 25, right: 135, bottom: 20),
                       child: TextField(
+                        textInputAction: TextInputAction.next,
                         onSubmitted: (text) {
                           setState(() {
                             if (!_controllers.any((controller) => controller.text.isEmpty || double.tryParse(controller.text) == null)) {
@@ -81,6 +82,7 @@ class _NameState extends State<GMSPage> {
                       height: 60,
                       margin: const EdgeInsets.only(left: 135, right: 25, top: 20, bottom: 20),
                       child: TextField(
+                        textInputAction: TextInputAction.next,
                         onSubmitted: (text) {
                           setState(() {
                             if (!_controllers.any((controller) => controller.text.isEmpty || double.tryParse(controller.text) == null)) {
@@ -148,6 +150,9 @@ class _NameState extends State<GMSPage> {
                       res,
                       style: const TextStyle(fontSize: 25, color: Color.fromARGB(229, 76, 108, 198)),
                       onTap: () {
+                        _controllers[0].clear();
+                        _controllers[1].clear();
+                        _controllers[2].clear();
                         Clipboard.setData(ClipboardData(text: res)).then(
                           (_) {
                             ScaffoldMessenger.of(context).showSnackBar(

@@ -51,21 +51,6 @@ class _NameState extends State<HomePage> {
                     _getModifyButton(context, const DirectPage(), "Direct geodetic task", ),
                     const SizedBox(width: 30),
                     Image.asset('assets/images/geodetic.png'),
-                    // Image.asset('assets/images/geodetic.png'),
-                    // const SizedBox(
-                      
-                    //   width: 40,
-                    //   height: 80,
-                    //   child: (
-                    //     'G',
-                    //     style: TextStyle(
-                    //       color: Color.fromARGB(229, 76, 108, 198),
-                    //       fontSize: 50,
-                    //       fontWeight: FontWeight.bold,
-                    //       fontStyle: FontStyle.italic,
-                    //     ),
-                    //   ),
-                    // ),
                   ],),
 
                   const SizedBox(height: 40),

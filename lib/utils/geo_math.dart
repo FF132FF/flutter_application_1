@@ -35,7 +35,7 @@ class GeoMath {
     double dy = d * sin(rad);
     double x2 = x1 + dx;
     double y2 = y1 + dy;
-    return "${x2.toStringAsFixed(2)}м ${y2.toStringAsFixed(2)}м";
+    return "${x2.toStringAsFixed(2)}m  ${y2.toStringAsFixed(2)}m";
   }
   
   static String inverseGeodeticTask([double x1 = 0.0, double y1 = 0.0, double x2 = 0.0, double y2 = 0.0]) {
@@ -74,6 +74,6 @@ class GeoMath {
       }
     }
     
-    return "${d.toStringAsFixed(2)}м ${toGMS(a)}";
+    return "${d.toStringAsFixed(2)}m  ${toGMS(a)}";
   }
 }
